@@ -1,0 +1,3 @@
+[submodule "agent-pay-fe"]
+	path = agent-pay-fe
+	url = https://github.com/Jacob-Cardoso/agent-pay-fe.git
