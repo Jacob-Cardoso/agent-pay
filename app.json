@@ -1,0 +1,56 @@
+{
+  "name": "AgentPay Backend",
+  "description": "FastAPI backend for AgentPay with Method Financial integration",
+  "repository": "https://github.com/Jacob-Cardoso/agent-pay",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["python", "fastapi", "method", "payments", "supabase"],
+  "image": "heroku/python",
+  "buildpacks": [
+    {
+      "url": "https://github.com/timanovsky/subdir-heroku-buildpack"
+    },
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "env": {
+    "PROJECT_PATH": {
+      "description": "Path to the backend directory",
+      "value": "agent-pay-backend"
+    },
+    "SUPABASE_URL": {
+      "description": "Supabase project URL"
+    },
+    "SUPABASE_KEY": {
+      "description": "Supabase service role key"
+    },
+    "SUPABASE_ANON_KEY": {
+      "description": "Supabase anonymous key"
+    },
+    "METHOD_API_KEY": {
+      "description": "Method Financial API key"
+    },
+    "METHOD_ENVIRONMENT": {
+      "description": "Method environment (dev/sandbox/production)",
+      "value": "dev"
+    },
+    "JWT_SECRET": {
+      "description": "JWT secret for authentication"
+    },
+    "ALGORITHM": {
+      "description": "JWT algorithm",
+      "value": "HS256"
+    },
+    "ACCESS_TOKEN_EXPIRE_MINUTES": {
+      "description": "JWT token expiration time",
+      "value": "1440"
+    },
+    "ENVIRONMENT": {
+      "description": "Application environment",
+      "value": "production"
+    },
+    "ALLOWED_ORIGINS": {
+      "description": "CORS allowed origins"
+    }
+  }
+}
